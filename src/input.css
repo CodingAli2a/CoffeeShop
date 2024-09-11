@@ -18,4 +18,11 @@
     src: url("/public/fonts/Morabba/Morabba-Bold.woff2") format("woff2");
 }
 
+body{
+    @apply font-morabaMedium;
+    background-image: url("/public/images/sliders/1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 }
