@@ -18,8 +18,18 @@
     src: url("/public/fonts/Morabba/Morabba-Bold.woff2") format("woff2");
 }
 
+@font-face {
+    font-family: "danaMedium";
+    src: url("/public/fonts/Dana/DanaFaNum-Medium.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "danaRegular";
+    src: url("/public/fonts/Dana/DanaFaNum-Medium.woff2") format("woff2");
+}
+
 body{
-    @apply font-morabaMedium;
+    @apply font-danaRegular;
     background-image: url("/public/images/sliders/1.png");
     background-repeat: no-repeat;
     background-size: cover;

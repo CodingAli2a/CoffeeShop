@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/app.css" />
     <link rel="icon" href="./images/app-logo.png" type="image/png" />
 </head>
-<body class="font-morabaMedium">
+<body class="font-danaRegular">
 
     <!-- همه آیکن ها -->
     <svg class="hidden">
@@ -29,7 +29,7 @@
     </svg>
 
 
-    <header class="flex justify-between items-center bg-black/50 w-[90%] mx-auto fixed top-5 left-0 right-0 rounded-3xl h-24 pr-10 pl-4 backdrop-blur-[6px] text-orange-200">
+    <header class="flex justify-between items-center bg-black/50 w-[90%] mx-auto fixed top-5 left-0 right-0 rounded-3xl h-24 pr-10 pl-4 backdrop-blur-[6px] text-orange-200 dark:bg-zinc-800">
         
         <!-- نگهدارنده هدر -->
         <div class="w-full flex items-center justify-between">
@@ -49,10 +49,10 @@
                 </li>
     
                 <!-- زیر منو دارد -->
-                <li>
+                <li class="relative">
                     <a href="#"> فروشگاه </a>
                     <!-- زیر منو -->
-                    <ul class="hidden">
+                    <ul class="absolute">
                         <li>
                             <a href="#"> قهوه ویژه </a>
                         </li>
@@ -121,7 +121,7 @@
             <span class="block w-px h-14 bg-white/20"></span>
 
             <!-- ورود و ثبت نام -->
-            <a class="flex items-center gap-x-2" href="#">
+            <a class="flex items-center gap-x-2 p-2 rounded-3xl hover:bg-orange-200/50 transition-all" href="#">
 
                 <!-- آیکن -->
                 <div>
@@ -130,7 +130,7 @@
                     </svg>
                 </div>
 
-                <span class=""> ورود | ثبت نام </span>
+                <span class="tracking-tightest"> ورود | ثبت نام </span>
 
             </a>
 
@@ -139,6 +139,7 @@
 
         </div>
 
+   
     </header>
     
     <script src="./scripts/app.js"></script>

@@ -9,6 +9,8 @@ module.exports = {
         "morabaLight": 'morabaLight',
         "morabaMedium": 'morabaMedium',
         "morabaBold": 'morabaBold ',
+        "danaMedium": "danaMedium",
+        "danaRegular": "danaRegular"
       },
 
       borderRadius: {
@@ -34,6 +36,6 @@ module.exports = {
 
     },
   },
-  plugins: [],
+  
 }
 
