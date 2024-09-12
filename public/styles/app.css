@@ -650,6 +650,20 @@ body{
   margin-top: 2.5rem;
 }
 
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
 .block {
   display: block;
 }
@@ -1013,6 +1027,10 @@ body{
   transition-duration: 150ms;
 }
 
+.delay-75 {
+  transition-delay: 75ms;
+}
+
 .hover\:bg-orange-300\/50:hover {
   background-color: rgb(253 186 116 / 0.5);
 }
@@ -1045,6 +1063,14 @@ body{
 
 .child\:inline-block>* {
   display: inline-block;
+}
+
+.child\:inline-flex>* {
+  display: inline-flex;
+}
+
+.child\:contents>* {
+  display: contents;
 }
 
 .child\:space-y-4>* > :not([hidden]) ~ :not([hidden]) {
