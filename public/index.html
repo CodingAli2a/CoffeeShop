@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,17 @@
     <title>Coffee Shop</title>
     <link rel="stylesheet" href="./styles/app.css" />
     <link rel="icon" href="./images/app-logo.png" type="image/png" />
+
+    <script type="text/javascript">
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+        } else {
+        document.documentElement.classList.remove('dark')
+        }
+    </script>
+
 </head>
-<body class="font-danaRegular">
+<body class="font-danaRegular bg-gray-100 dark:bg-gray-800">
 
     <!-- همه آیکن ها -->
     <svg class="hidden">
@@ -24,12 +33,17 @@
         <symbol id="arrow-right-end-on-rectangle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
         </symbol>
+
+        <symbol id="sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+        </symbol>
+          
         
           
     </svg>
 
 
-    <header class="flex justify-between items-center bg-black/50 w-[90%] mx-auto fixed top-5 left-0 right-0 rounded-3xl h-24 pr-10 pl-4 backdrop-blur-[6px] text-orange-200 dark:bg-zinc-800">
+    <header class="flex justify-between items-center bg-black/50 w-[90%] mx-auto fixed top-5 left-0 right-0 rounded-3xl h-24 pr-10 pl-4 backdrop-blur-[6px] text-zinc-300">
         
         <!-- نگهدارنده هدر -->
         <div class="w-full flex items-center justify-between">
@@ -42,17 +56,17 @@
             </a>
     
 
-            <ul class="flex items-center justify-cente gap-x-9 tracking-tightest">
+            <ul class="flex items-center justify-center gap-x-9 tracking-tightest h-14 child:leading-[56px] child-hover:text-orange-300">
 
-                <li>
+                <li class="text-orange-300">
                     <a href="#"> صفحه اصلی </a>
                 </li>
     
                 <!-- زیر منو دارد -->
-                <li class="relative">
-                    <a href="#"> فروشگاه </a>
+                <li class="relative group">
+                    <a class="group-hover:text-orange-300" href="#"> فروشگاه </a>
                     <!-- زیر منو -->
-                    <ul class="absolute">
+                    <ul class="opacity-0 child:block child:child:inline-block invisible group-hover:visible group-hover: opacity-100 transition-all child-hover:transition-colors child-hover:text-orange-300  absolute child:space-y-4 bg-white dark:bg-zinc-700 text-zinc-700 text-base space-y-4 tracking-normal shadow-normal dark:text-white w-52 p-4 rounded-2xl border-t-4 border-t-orange-300">
                         <li>
                             <a href="#"> قهوه ویژه </a>
                         </li>
@@ -106,8 +120,12 @@
                 </div>
 
                 <!-- تم تاگل -->
-                <div class="cursor-pointer">
-                    <svg class="w-8 h-8">
+                <div id="theme-toggle" class="cursor-pointer">
+                    <svg class="hidden dark:inline-block w-8 h-8">
+                        <use xlink:href="#sun"></use>
+                    </svg>
+
+                    <svg class="inline-block dark:hidden w-8 h-8">
                         <use xlink:href="#moon"></use>
                     </svg>
                 </div>
@@ -121,7 +139,7 @@
             <span class="block w-px h-14 bg-white/20"></span>
 
             <!-- ورود و ثبت نام -->
-            <a class="flex items-center gap-x-2 p-2 rounded-3xl hover:bg-orange-200/50 transition-all" href="#">
+            <a class="flex items-center gap-x-2 p-2 rounded-3xl hover:bg-orange-300/50 hover:text-zinc-100 transition-all" href="#">
 
                 <!-- آیکن -->
                 <div>
