@@ -9,8 +9,9 @@ module.exports = {
         "morabaLight": 'morabaLight',
         "morabaMedium": 'morabaMedium',
         "morabaBold": 'morabaBold ',
+        "danaBold": "danaBold",
         "danaMedium": "danaMedium",
-        "danaRegular": "danaRegular"
+        "danaRegular": "danaRegular",
       },
 
       borderRadius: {
@@ -32,6 +33,10 @@ module.exports = {
 
       letterSpacing:{
         "tightest": "-0.068em"
+      },
+
+      spacing: {
+        "30": "7.5rem",
       }
 
     },
