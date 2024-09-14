@@ -42,26 +42,39 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
         </symbol>
           
+        <symbol id="bars-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </symbol>
+
+        <symbol id="chevron-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </symbol>
+          
+        <symbol id="x-mark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </symbol>
+          
           
         
           
     </svg>
 
 
-    <header class="flex justify-between items-center bg-black/50 w-[90%] mx-auto fixed top-5 left-0 right-0 rounded-3xl h-24 pr-10 pl-4 backdrop-blur-[6px] text-zinc-300">
+    <!-- هدر دسکتاپ -->
+    <header class="z-10 hidden md:flex justify-between items-center bg-black/50 w-[90%] mx-auto fixed top-5 left-0 right-0 rounded-3xl h-24 pr-10 pl-4 backdrop-blur-[6px] text-zinc-300">
         
         <!-- نگهدارنده هدر -->
         <div class="w-full flex items-center justify-between">
 
             <!-- منو و لوگو -->
-        <nav class="flex items-center justify-center gap-9">
+        <nav class="flex items-center justify-center gap-x-4 lg:gap-x-9">
 
             <a class="block" href="#">
-                <img src="./images/app-logo.png" alt="Coffee Shop">
+                <img class="shrink-0" src="./images/app-logo.png" alt="Coffee Shop">
             </a>
     
 
-            <ul class="flex items-center justify-center gap-x-9 tracking-tightest h-14 child:leading-[56px] child-hover:text-orange-300">
+            <ul class="flex items-center justify-center gap-x-4 lg:gap-x-9 tracking-tightest h-14 child:leading-[56px] child-hover:text-orange-300">
 
                 <li class="text-orange-300">
                     <a href="#"> صفحه اصلی </a>
@@ -69,7 +82,12 @@
     
                 <!-- زیر منو دارد -->
                 <li class="relative group">
-                    <a class="group-hover:text-orange-300" href="#"> فروشگاه </a>
+                    <a class="flex items-center gap-x-2 group-hover:text-orange-300" href="#"> 
+                        <span>فروشگاه </span>
+                        <svg class="w-4 h-4 group-hover:rotate-180 transition-all">
+                            <use href="#chevron-down"></use>
+                        </svg>
+                    </a>
                     <!-- زیر منو -->
                     <div class="opacity-0 invisible child:block group-hover:visible group-hover: opacity-100 transition-all delay-75 child-hover:transition-colors  child-hover:text-orange-300  absolute right-0 child:space-y-4 bg-white dark:bg-zinc-700 text-zinc-700 text-base space-y-4 tracking-normal shadow-normal dark:text-white w-52 p-4 rounded-2xl border-t-4 border-t-orange-300">
                             <a href="#"> قهوه ویژه </a>
@@ -107,9 +125,9 @@
         </nav>
 
         <!-- ورود و تم تاگل و سبد خرید -->
-        <div class="flex items-center justify-between gap-x-5">
+        <div class="flex items-center justify-between gap-x-4 lg:gap-x-5">
             <!-- تم تاگل و سبد خرید -->
-            <div class="flex items-center gap-x-4">
+            <div class="flex items-center gap-x-4 lg:gap-x-5">
 
                 <!-- سبد خرید -->
                 <div class="relative group pt-3 pb-3">
@@ -132,7 +150,7 @@
                         </div>
 
                         <!-- نگهدارنده محصولات سبد خرید -->
-                        <div class="flex flex-col gap-4 max-h-52 overflow-auto mt-5">
+                        <div class="flex flex-col gap-4 scrolt max-h-52 overflow-auto mt-5">
 
                             <!-- محصول اضافه شده به سبد -->
                          <div class="flex justify-between gap-5 border-b dark:border-b-white/10 border-b-gray-300 ">
@@ -190,14 +208,14 @@
                                 </div>
                             </div>
                             <!-- دکمه ثبت سفارش -->
-                             <a class="inline-block py-3 px-5 text-white bg-teal-600 dark:bg-emerald-500 font-danaRegular rounded-xl" href="#">ثبت سفارش</a>
+                             <a class="inline-block py-3 px-5 text-white bg-teal-600 dark:bg-emerald-500 hover:bg-teal-700 dark:hover:bg-emerald-600 font-danaRegular rounded-xl" href="#">ثبت سفارش</a>
                           </div>
                      </div>
 
                 </div>
 
                 <!-- تم تاگل -->
-                <div id="theme-toggle" class="cursor-pointer">
+                <div id="" class="theme-toggle cursor-pointer">
                     <svg class="hidden dark:inline-block w-8 h-8">
                         <use xlink:href="#sun"></use>
                     </svg>
@@ -216,7 +234,7 @@
             <span class="block w-px h-14 bg-white/20"></span>
 
             <!-- ورود و ثبت نام -->
-            <a class="flex items-center gap-x-2 p-2 rounded-3xl hover:bg-orange-300/50 hover:text-zinc-100 transition-all" href="#">
+            <a class="flex items-center gap-x-2  hover:text-zinc-100 transition-all" href="#">
 
                 <!-- آیکن -->
                 <div>
@@ -225,7 +243,7 @@
                     </svg>
                 </div>
 
-                <span class="tracking-tightest"> ورود | ثبت نام </span>
+                <span class="hidden lg:block tracking-tightest"> ورود | ثبت نام </span>
 
             </a>
 
@@ -236,6 +254,103 @@
 
    
     </header>
+
+    <!-- هدر موبایل -->
+    <div class="flex md:hidden items-center justify-between bg-white dark:bg-zinc-700 p-4">
+
+        <!-- تاگل دکمه-->
+        <div id="menu-toggler">
+            <svg class="cursor-pointer w-8 h-8 text-zinc-700 dark:text-white">
+                <use href="#bars-3"></use>
+            </svg>
+        </div>
+
+        <!-- منو موبایل --> 
+        <div id="mobile-menu" class="z-20 w-60 min-h-screen bg-white dark:bg-zinc-700 shadow-normal absolute top-0 -right-60 bottom-0 transition-all p-2 block md:hidden">
+            <!-- هدر موبایل -->
+            <div class="flex justify-between items-center border-b border-b-gray-100 dark:border-b-white/10 pb-5">
+
+
+            <!-- لوگوها -->
+            <div class="flex items-center gap-x-2">
+
+                <div class="w-[41px] h-10">
+                    <img class="w-full h-full" src="/public/images/app-logo.png" alt="lapp logo">
+                </div>
+
+                <div class="w-[100px] h-10">
+                    <img class="w-full h-full" src="/public/images/mobileLogo.png" alt="mobil logo">
+                </div>
+            </div>
+
+
+            <!-- بستن منو موبایل -->
+        <div class="w-5 h-5 text-zinc-700 dark:text-white" id="close-mobile-menu">
+            <svg class="w-full h-full cursor-pointer">
+                <use href="#x-mark"></use>
+            </svg>
+        </div>
+
+            
+            </div>
+
+            <!-- قسمت پایین منو موبایل -->
+            <div class="space-y-6 text-orange-300 border-t border-t-gray-100 dark:border-t-white/10 pt-5 px-4 mt-8 "> 
+                
+                <a class="flex items-center gap-x-2" href="#">
+                    <svg class="w-6 h-6">
+                        <use xlink:href="#arrow-right-end-on-rectangle"></use>
+                    </svg>
+                
+                    ورود | ثبت نام
+                </a>
+
+                <div class="theme-toggle cursor-pointer flex items-center gap-x-2 dark:hidden">
+                    <svg class="w-6 h-6">
+                        <use href="#moon"></use>
+                    </svg>
+                    <span>تم تیره</span>
+                </div>
+                <div class="theme-toggle cursor-pointer hidden dark:flex items-center gap-x-2">
+                    <svg class="w-6 h-6">
+                        <use href="#sun"></use>
+                    </svg>
+                    <span>تم روشن</span>
+                </div>
+
+                <a class="flex items-center gap-x-2" href="#"> 
+
+                    <svg class="w-6 h-6 cursor-pointer">
+                        <use xlink:href="#shopping-cart"></use>
+                    </svg>
+
+                    سبد خرید
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- لوگو تایپ -->
+        <div class="w-[100px] h-10 shrink-0">
+            <a href="#">
+                <img class="select-none" src="/public/images/mobileLogo.png" alt="mobile logo"/> 
+            </a>
+        </div>
+
+        <!-- دکمه سبد خرید -->
+        <div>
+            <svg class="cursor-pointer w-8 h-8 text-zinc-700 dark:text-white">
+                <use href="#shopping-cart"></use>
+            </svg>
+        </div>
+
+    </div>
+
+    
+    <!-- پوشش حالت موبایل -->
+     <div id="overlay" class="hidden dark:hidden fixed inset-0 bg-black/50 z-10 block md:hidden"></div>
     
     <script src="./scripts/app.js"></script>
 </body>
